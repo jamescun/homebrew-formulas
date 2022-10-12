@@ -5,21 +5,21 @@
 class Httplog < Formula
   desc "httplog is a command line tool that logs HTTP requests"
   homepage "https://github.com/jamescun/httplog"
-  version "1.0.0"
+  version "1.0.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jamescun/httplog/releases/download/v1.0.0/httplog_1.0.0_darwin_arm64.tar.gz"
-      sha256 "306856f7fc3ee0fec6bfa83dffd1b25ac4e1bfdfd4935141f5bcd70b6cb36663"
+      url "https://github.com/jamescun/httplog/releases/download/1.0.1/httplog_1.0.1_darwin_arm64.tar.gz"
+      sha256 "4135bbaf236b1dcdd8d6bcbbc0d0edc7dc55950229b41a7cbc8f10297edacf43"
 
       def install
         bin.install "httplog"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jamescun/httplog/releases/download/v1.0.0/httplog_1.0.0_darwin_amd64.tar.gz"
-      sha256 "653b9faa7b2f5578e13bcbc82698722b6eb7a77ae189a8f6ce34004959dc4e7b"
+      url "https://github.com/jamescun/httplog/releases/download/1.0.1/httplog_1.0.1_darwin_amd64.tar.gz"
+      sha256 "a582ea83c650f620991adaff8b540c8e5ea5b89885628c46b4319c8bbd365fed"
 
       def install
         bin.install "httplog"
@@ -29,16 +29,16 @@ class Httplog < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jamescun/httplog/releases/download/v1.0.0/httplog_1.0.0_linux_arm64.tar.gz"
-      sha256 "23372d345a2686d01d4b947f3edc5004fc0e14865fd4c40e0b22924959ff46c2"
+      url "https://github.com/jamescun/httplog/releases/download/1.0.1/httplog_1.0.1_linux_arm64.tar.gz"
+      sha256 "601097c43ec88f5d05099b702e1d6ceaa8f324511fadaa3f135ee4f33345f0bb"
 
       def install
         bin.install "httplog"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jamescun/httplog/releases/download/v1.0.0/httplog_1.0.0_linux_amd64.tar.gz"
-      sha256 "c00a578670980b03ac2a820f81204427c29ca936c46efeb68afd65b1e3221bc1"
+      url "https://github.com/jamescun/httplog/releases/download/1.0.1/httplog_1.0.1_linux_amd64.tar.gz"
+      sha256 "6933b8b2336847d3cfeacb2e21be479c30b419c3d4e9732c36fb0bfd497980bd"
 
       def install
         bin.install "httplog"
