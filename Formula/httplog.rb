@@ -5,21 +5,21 @@
 class Httplog < Formula
   desc "httplog is a command line tool that logs HTTP requests"
   homepage "https://github.com/jamescun/httplog"
-  version "1.0.1"
+  version "1.0.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/jamescun/httplog/releases/download/1.0.1/httplog_1.0.1_darwin_arm64.tar.gz"
-      sha256 "4135bbaf236b1dcdd8d6bcbbc0d0edc7dc55950229b41a7cbc8f10297edacf43"
+    if Hardware::CPU.intel?
+      url "https://github.com/jamescun/httplog/releases/download/1.0.2/httplog_1.0.2_darwin_amd64.tar.gz"
+      sha256 "4bac9f0309985830ee8edc5a943fb4fdee1a415bb703e192c51492f2fde81246"
 
       def install
         bin.install "httplog"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/jamescun/httplog/releases/download/1.0.1/httplog_1.0.1_darwin_amd64.tar.gz"
-      sha256 "a582ea83c650f620991adaff8b540c8e5ea5b89885628c46b4319c8bbd365fed"
+    if Hardware::CPU.arm?
+      url "https://github.com/jamescun/httplog/releases/download/1.0.2/httplog_1.0.2_darwin_arm64.tar.gz"
+      sha256 "259d00f1e285bdf0a49b876bb5f5cba62ce2a934494f1a5667e5202cdca51cb6"
 
       def install
         bin.install "httplog"
@@ -29,16 +29,16 @@ class Httplog < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jamescun/httplog/releases/download/1.0.1/httplog_1.0.1_linux_arm64.tar.gz"
-      sha256 "601097c43ec88f5d05099b702e1d6ceaa8f324511fadaa3f135ee4f33345f0bb"
+      url "https://github.com/jamescun/httplog/releases/download/1.0.2/httplog_1.0.2_linux_arm64.tar.gz"
+      sha256 "48d61b810e88a5505484464eb85bd044d5570c5a7dcbaef1780a34496f2e153f"
 
       def install
         bin.install "httplog"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jamescun/httplog/releases/download/1.0.1/httplog_1.0.1_linux_amd64.tar.gz"
-      sha256 "6933b8b2336847d3cfeacb2e21be479c30b419c3d4e9732c36fb0bfd497980bd"
+      url "https://github.com/jamescun/httplog/releases/download/1.0.2/httplog_1.0.2_linux_amd64.tar.gz"
+      sha256 "cdb35e242e24a680595d41b9a5ac28e3197e641b9a88c67984dad88ef3660b87"
 
       def install
         bin.install "httplog"
